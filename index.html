@@ -2,42 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>🌟 Welcome to My Cool Page!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launchpad</title>
     <style>
         body {
-            background: #f0f0f5;
             font-family: Arial, sans-serif;
+            background-color: #1e1e2e;
+            color: white;
             text-align: center;
-            padding: 50px;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 10vh;
         }
         h1 {
-            color: #4CAF50;
-            font-size: 3em;
+            font-size: 3rem;
         }
-        p {
-            font-size: 1.2em;
-            color: #333;
+        .links {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
-        a {
-            display: inline-block;
-            margin-top: 20px;
+        .link {
+            padding: 15px 30px;
+            background-color: #4a4a6a;
+            border-radius: 10px;
             text-decoration: none;
-            background: #4CAF50;
             color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
-            transition: background 0.3s ease;
+            font-size: 1.2rem;
+            transition: 0.3s;
         }
-        a:hover {
-            background: #45a049;
+        .link:hover {
+            background-color: #6464a3;
         }
     </style>
 </head>
 <body>
-
-    <h1>👋 Hello, ahmed bgha y9oul chi 7aja !!! hhhhhh</h1>
-    <p>Welcome to my simple yet stylish HTML page.</p>
-    <a href="#">Click Me!</a>
-
+    <div class="container">
+        <h1>Welcome to My Launchpad</h1>
+        <div class="links">
+            <a class="link" href="https://example.com">Example Link 1</a>
+            <a class="link" href="https://example.com">Example Link 2</a>
+            <a class="link" href="https://example.com">Example Link 3</a>
+        </div>
+    </div>
 </body>
 </html>
