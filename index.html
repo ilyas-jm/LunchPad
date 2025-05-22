@@ -6,36 +6,51 @@
     <title>Launchpad</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #1e1e2e;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #1e1e2e, #3a3a5a);
             color: white;
             text-align: center;
             margin: 0;
             padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
         .container {
-            margin-top: 10vh;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
         }
         h1 {
             font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         .links {
-            margin-top: 30px;
+            margin-top: 20px;
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
         }
         .link {
-            padding: 15px 30px;
-            background-color: #4a4a6a;
+            width: 200px;
+            padding: 15px;
+            background: linear-gradient(135deg, #4a4a6a, #6464a3);
             border-radius: 10px;
             text-decoration: none;
             color: white;
             font-size: 1.2rem;
-            transition: 0.3s;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
         }
         .link:hover {
-            background-color: #6464a3;
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #6464a3, #7a7acf);
+            box-shadow: 0px 6px 12px rgba(0,0,0,0.5);
         }
     </style>
 </head>
