@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neon Launchpad</title>
+    <title>Wanted List</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
         body {
             font-family: "Orbitron", sans-serif;
             background: black;
-            color: cyan;
+            color: limegreen; /* Changed to green for a classic "wanted" look */
             text-align: center;
             margin: 0;
             padding: 0;
@@ -21,66 +21,69 @@
             overflow: hidden;
         }
         .container {
-            background: rgba(0, 255, 255, 0.1);
+            background: rgba(0, 255, 0, 0.1); /* Green tint */
             padding: 40px;
             border-radius: 15px;
             backdrop-filter: blur(20px);
-            box-shadow: 0px 0px 20px cyan;
+            box-shadow: 0px 0px 20px limegreen; /* Green shadow */
             transition: 0.5s;
+            width: 80%; /* Make container a bit wider for the list */
+            max-width: 600px; /* Max width for better readability */
         }
         .container:hover {
-            transform: scale(1.03);
-            box-shadow: 0px 0px 30px cyan;
+            transform: scale(1.01); /* Slightly less dramatic hover */
+            box-shadow: 0px 0px 30px limegreen;
         }
         h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             animation: glow 1.5s infinite alternate;
+            margin-bottom: 30px; /* Space below heading */
+            color: red; /* "Wanted" in a striking red */
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: limegreen;
         }
         @keyframes glow {
-            0% { text-shadow: 0px 0px 5px cyan; }
-            100% { text-shadow: 0px 0px 20px cyan; }
+            0% { text-shadow: 0px 0px 5px limegreen; }
+            100% { text-shadow: 0px 0px 20px limegreen; }
         }
-        .links {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
+        .wanted-list {
+            list-style: none; /* Remove default bullet points */
+            padding: 0;
+            margin: 0;
         }
-        .link {
-            width: 250px;
-            padding: 15px;
-            background: transparent;
-            border: 2px solid cyan;
-            border-radius: 10px;
-            text-decoration: none;
-            color: cyan;
-            font-size: 1.2rem;
-            transition: all 0.3s ease-in-out;
-            position: relative;
-            overflow: hidden;
+        .wanted-list li {
+            background: rgba(0, 255, 0, 0.05); /* Lighter green background for items */
+            padding: 15px 20px;
+            border: 1px solid limegreen;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            text-align: left; /* Align text to the left within the list item */
+            font-size: 1.1rem;
+            color: white; /* White text for better contrast */
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
-        .link::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: cyan;
-            opacity: 0.2;
-            transition: 0.3s;
+        .wanted-list li:last-child {
+            margin-bottom: 0; /* No margin for the last item */
         }
-        .link:hover::before {
-            left: 0;
+        .wanted-list li:hover {
+            transform: translateY(-3px); /* Slight lift on hover */
+            box-shadow: 0 0 15px limegreen;
         }
-        .link:hover {
-            color: black;
-            background: cyan;
-            box-shadow: 0px 0px 15px cyan;
-            transform: scale(1.1);
+        .wanted-list li strong {
+            color: red; /* Highlight name in red */
+            font-size: 1.2em;
+        }
+        .bounty {
+            float: right; /* Align bounty to the right */
+            color: yellow; /* Yellow for bounty amount */
+            font-weight: bold;
+            font-size: 1.1em;
         }
         .glow {
             position: absolute;
@@ -94,12 +97,26 @@
 <body>
     <div class="glow"></div>
     <div class="container">
-        <h1>Neon Launchpad</h1>
-        <div class="links">
-            <a class="link" href="https://example.com">Example Link 1</a>
-            <a class="link" href="https://example.com">Example Link 2</a>
-            <a class="link" href="https://example.com">Example Link 3</a>
-        </div>
+        <h1>WANTED</h1>
+        <h2>Dangerous Individuals & Organizations</h2>
+        <ul class="wanted-list">
+            <li>
+                <strong>Dr. Vex</strong> <span class="bounty">$1,000,000</span><br>
+                Known for: Cyber-terrorism, data theft, and creating sentient AI.
+            </li>
+            <li>
+                <strong>The Shadow Syndicate</strong> <span class="bounty">$500,000</span><br>
+                Known for: Underground arms dealing and corporate espionage.
+            </li>
+            <li>
+                <strong>Siren (aka Lyra Dubois)</strong> <span class="bounty">$750,000</span><br>
+                Known for: Master of disguise, infiltration, and information brokering.
+            </li>
+            <li>
+                <strong>The Chrono-Marauders</strong> <span class="bounty">$2,500,000</span><br>
+                Known for: Illicit temporal displacement and historical disruption.
+            </li>
+        </ul>
     </div>
 </body>
 </html>
